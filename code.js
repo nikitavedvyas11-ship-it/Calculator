@@ -15,6 +15,14 @@ btn_0.addEventListener("click", function () {
     console.log(curr);
 });
 
+let btn_00 = document.getElementById("btn-18");
+btn_00.addEventListener("click", function () {
+    curr += btn_00.value;
+    expression += btn_00.value;
+    result.value = expression;
+    console.log(curr);
+});
+
 let btn_1 = document.getElementById("btn-13");
 btn_1.addEventListener("click", function () {
     curr += btn_1.value;
@@ -186,6 +194,14 @@ btn_equal.addEventListener("click", function () {
     console.log("Output =", total);
 });
 
+//DOT
+let btn_d = document.getElementById("btn-19");
+btn_d.addEventListener("click", function () {
+    curr += btn_d.value;
+    expression += btn_d.value;
+    result.value = expression;
+    console.log(curr);
+});
 
 // AC
 let btn_AC = document.getElementById("btn-1");
