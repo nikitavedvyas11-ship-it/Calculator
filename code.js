@@ -99,10 +99,10 @@ btn_9.addEventListener("click", function () {
 let btn_plus = document.getElementById("btn-16");
 btn_plus.addEventListener("click", function () {
     if (curr == "") {
-        expression = expression.slice(0, -1); // last operator hata do
-        operator = btn_plus.value;            // naya operator store karo
-        expression += operator;               // expression me add karo
-        result.value = expression;            // display update karo
+        expression = expression.slice(0, -1); // remove the last entered operator
+        operator = btn_plus.value;           // store the new operator
+        expression += operator;              // add to the expression
+        result.value = expression;           // update the display
         return;
     }
         curr = "";
@@ -161,10 +161,10 @@ btn_mul.addEventListener("click", function () {
 let btn_div = document.getElementById("btn-4");
 btn_div.addEventListener("click", function () {
     if (curr == "") {
-        expression = expression.slice(0, -1); // last operator hata do
-        operator = btn_div.value;            // naya operator store karo
-        expression += operator;               // expression me add karo
-        result.value = expression;            // display update karo
+        expression = expression.slice(0, -1); 
+        operator = btn_div.value;            
+        expression += operator;               
+        result.value = expression;            
         return;
     }
 
@@ -220,3 +220,9 @@ btn_DEL.addEventListener("click", function () {
     expression = expression.slice(0, -1);
     result.value = expression;
 });
+//percentage
+let btn_perc = document.getElementById("btn-3");
+btn_perc.addEventListener("click", function () {
+    expression = expression + '/100'+'*';
+    result.value = expression;
+});     
